@@ -1,0 +1,1 @@
+This is the user case for the booking functionality, the user is able to display the avialable cars and then explore it's details and/or selecting the booking period. Afterwards, you will be redirected to the payment page.
