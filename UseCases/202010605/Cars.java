@@ -33,6 +33,14 @@ public class Cars {
         return brand+" "+model+" "+year+" "+price;
         //overwritting the default toString method as we want the details and the Cars object and not it's hashcode 
       }
+
+    public int getYear() {
+        return this.year;
+    }
+
+    public int getPrice() {
+        return this.price;
+    }
     }
 
     
