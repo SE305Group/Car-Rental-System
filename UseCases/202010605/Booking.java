@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Booking {
-private ArrayList<Cars> allCars;
+public ArrayList<Cars> allCars;
 public Scanner kb;
 //an arraylist will give us flexibility in order to easily access the Cars class objects.
 
@@ -23,21 +23,21 @@ public void run() {
     //This method is simply calling other methods that will do each part of the work in enclosed area so that errors are easily fixable and maintained.
 }
 
-private void displayCars() {
+public void displayCars() {
     System.out.println("Type 'yes' if you would like to display the cars available!");
     String userInput = kb.nextLine();
 
-    if (!userInput.equals("yes")) {
+   if (!userInput.equals("yes")) {
         System.out.println("Terminated");
         System.exit(0);
     }
-
     for (int i = 0; i < allCars.size(); i++) {
-        System.out.println((i+1) + ": " + allCars.get(i).getBrand() + " " + allCars.get(i).getModel());
-    }//displays the allCars arraylist after user interest in viewing the car list.
+        System.out.println((i + 1) + ": " + allCars.get(i).getBrand() + " " + allCars.get(i).getModel());
+    }
 }
 
-private int getCarNumber() {
+
+public int getCarNumber() {
     System.out.println("Type the car number to show the full details of the car!");
     int carNumber = kb.nextInt();
     kb.nextLine();
@@ -50,13 +50,13 @@ private int getCarNumber() {
     return carNumber;//obtain the car index that the user is interested in to learn more about.
 }
 
-private Cars getCarDetails(int carNumber) {
+public Cars getCarDetails(int carNumber) {
     Cars selectedCar = allCars.get(carNumber-1);
     System.out.println(selectedCar);
     return selectedCar;//using the get function in arraylists to return the Cars object that the user was interested in.
 }
 
-private void bookCar(Cars selectedCar) {
+public void bookCar(Cars selectedCar) {
     System.out.println("Would you like to book this car? Type 'yes' followed by the starting date of rental and the end date");
     String userBooking = kb.nextLine();
 
@@ -71,7 +71,7 @@ private void bookCar(Cars selectedCar) {
     System.out.println(startingDate + " " + finishDate + " is available");//obtains the date and confirmation for a car booking interesting, once it is checked it will continue further, but for now I didnt implement this and simply assumed it is available
 }
 
-private void confirmBooking() {
+public void confirmBooking() {
     System.out.println("Type 'yes' to confirm the booking, you will be sent to the payment page");
     String userInput = kb.nextLine();
 
@@ -83,7 +83,7 @@ private void confirmBooking() {
     System.out.println("Sent to payment page!");//once user confirms the last time, he will be reirected to the payment page.
 }
 
-private void goToPayment() {
+public void goToPayment() {
     //This is where the page would switch to the payment page
 }
 
