@@ -68,7 +68,7 @@ public void bookCar(Cars selectedCar) {
     String startingDate = userBooking.split(" ")[1];
     String finishDate = userBooking.split(" ")[2];
 
-    System.out.println(startingDate + " " + finishDate + " is available");//obtains the date and confirmation for a car booking interesting, once it is checked it will continue further, but for now I didnt implement this and simply assumed it is available
+    System.out.println( " " + finishDate + " is available");//obtains the date and confirmation for a car booking interesting, once it is checked it will continue further, but for now I didnt implement this and simply assumed it is available
 }
 
 public void confirmBooking() {

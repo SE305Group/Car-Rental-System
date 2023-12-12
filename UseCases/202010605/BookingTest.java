@@ -65,7 +65,8 @@ public void testDisplayCarsYes() {
 
     // Booking setup
     Booking booking = new Booking();
-    booking.allCars.add(new Cars("Honda", "Civic", 2016, 30)); // Add other cars
+    booking.allCars.add(new Cars("Honda", "Civic", 2016, 30));
+    booking.allCars.add(new Cars("H", "C", 2010, 300)); // Add other cars
     booking.kb = new Scanner(new ByteArrayInputStream("yes".getBytes()));
 
     // Method call
